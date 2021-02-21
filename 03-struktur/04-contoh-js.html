@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Pakai JS</title>
+
+  <style>
+    body {
+      background-color: #272727;
+      padding: 20px;
+      color: white;
+    }
+  
+    button {
+      background-color: rgb(11, 148, 197);
+      padding: 15px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contoh Pakai JS<h1>
+  <button>Tombol Kiri</button>
+  <button>Tombol Kanan</button>
+
+  <script>
+    const tombolKiri = document.querySelector('button')
+  
+    tombolKiri.addEventListener('click', () => {
+      const teks = document.createElement('p')
+      teks.innerHTML = 'Tombol diklik'
+  
+      document.body.appendChild(teks)
+
+      setTimeout(() => {
+        teks.remove()
+      }, 1000)
+    })
+  </script>
+</body>
+</html>
